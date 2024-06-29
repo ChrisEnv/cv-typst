@@ -8,13 +8,13 @@ The Typst implementation part is inspired by Paul Tsouchlos’s [modern-cv](http
 If you would like to add the clean theme to an existing directory:
 
 ```bash
-quarto install extension kazuyanagimoto/quarto-awesomecv-typst
+quarto install extension chrisenv/cv-typst@current
 ```
 
 or you can use a Quarto template that bundles a .qmd starter file:
 
 ```bash
-quarto use template kazuyanagimoto/quarto-awesomecv-typst
+quarto use template chrisenv/cv-typst@current
 ```
 
 ## Customization

@@ -24,18 +24,23 @@ quarto use template kazuyanagimoto/quarto-awesomecv-typst
 Set author information in YAML.
 
 ```yaml
+title: "firstname name CV"
 author:
-  firstname: Albert
-  lastname: Einstein
-  address: "Rämistrasse 101, CH-8092 Zürich, Switzerland, Zürich"
-  position: "Research Physicist ・ Professor"
+  firstname: firstname
+  lastname: name
+  address: "address"
+  position: "birthday"
   contacts:
+    - icon: assets/icon/phone-solid.svg
+      text: +49 XXXXXXXXXX
     - icon: fa envelope
-      text: ae@example.com
-      url: "mailto:ae@example.com"
-    - icon: PATH_TO_ICON/icon.svg
-      text: example.com
-      url: https://example.com
+      text: sample@sample
+      url: "mailto:sample@sample.de"
+    - icon: fa brands linkedin
+      text: /in/xxx
+      url: https://www.linkedin.com/in/xxx/
+
+format: awesomecv-typst
 ```
 
 - [fontawesome](https://fontawesome.com/search?m=free&o=r) icons are supported
@@ -54,17 +59,6 @@ style:
 format:
   awesomecv-typst:
     font-paths: ["PATH_TO_FONT"]
-```
-
-By default, it uses the system fonts, but you can specify the font paths in the `font-paths` field (e.g., GitHub Actions usage.)
-
-### Profile Photo
-
-You can set a profile photo in YAML.
-If you set it, the header will be left-aligned.
-
-```yaml
-profile-photo: "PATH_TO_PHOTO/photo.jpg"
 ```
 
 ## kazuyanagimoto/typstcv

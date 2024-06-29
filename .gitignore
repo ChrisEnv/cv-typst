@@ -1,2 +1,6 @@
 *.pdf
 template.typ
+.Rproj.user
+
+my-cv/
+/.quarto/

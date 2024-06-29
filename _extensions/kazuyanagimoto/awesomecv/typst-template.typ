@@ -65,15 +65,14 @@ $endif$
 
 // layout utility
 #let __justify_align(left_body, right_body) = {
-  block[
-    #box(width: 4fr)[#left_body]
-    #box(width: 1fr)[
-      #align(right)[
-        #right_body
-      ]
-    ]
-  ]
+grid(
+  columns: (4fr, 2fr),
+  gutter: 3pt,
+  align(left, left_body),
+  align(right, right_body)
+  )
 }
+
 
 #let __justify_align_3(left_body, mid_body, right_body) = {
   block[
@@ -173,8 +172,8 @@ $endif$
         style: "normal",
         font: (font-header),
       )
-      #text(fill: color-gray, weight: "thin")[#firstname]
-      #text(weight: "bold")[#lastname]
+      #text(weight: "bold")[#firstname]
+      #text(weight: "thin")[#lastname]
     ]
   ]
 }
@@ -342,7 +341,7 @@ $endif$
 #let resume(
   title: "CV",
   author: (:),
-  date: datetime.today().display("[month repr:long] [day], [year]"),
+  date: datetime.today().display("[day].[month].[year]"),
   profile-photo: "",
   body,
 ) = {
@@ -400,8 +399,8 @@ $endif$
     )
     
     #align(left)[
-      #text[#strong[#text(color-accent)[#it.body.text.slice(0, 3)]#text(color-darkgray)[#it.body.text.slice(3)]]]
-      #box(width: 1fr, line(length: 100%))
+      #text[#strong[#text(color-darkgray)[#it.body.text.slice(0, 3)]#text(color-darkgray)[#it.body.text.slice(3)]]]
+      #box(width: 1fr, line(length: 100%, stroke: (paint: color-accent)))
     ]
   ]
   

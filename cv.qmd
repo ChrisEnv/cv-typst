@@ -1,0 +1,104 @@
+---
+title: "firstname name CV"
+author:
+  firstname: firstname
+  lastname: name
+  address: "address"
+  position: "birthday"
+  contacts:
+    - icon: assets/icon/phone-solid.svg
+      text: +49 XXXXXXXXXX
+    - icon: fa envelope
+      text: sample@sample
+      url: "mailto:sample@sample.de"
+    - icon: fa brands linkedin
+      text: /in/xxx
+      url: https://www.linkedin.com/in/xxx/
+
+format: awesomecv-typst
+---
+
+## academic education
+
+```{=typst}
+#resume-entry(
+  title: "title",
+  location: "location",
+  date: "date",
+  description: "Thesis: title",
+)
+#resume-item[
+  specialisation:
+  - 1
+  - 2
+  - 3
+]
+#resume-entry(
+  title: "title",
+  location: "location",
+  date: "date",
+  description: "Thesis: title",
+)
+```
+
+## professional career
+
+```{=typst}
+#resume-entry(
+  title: "position",
+  location: "company",
+  date: "date",
+  description: "title"
+)
+#resume-item[
+  - description 1
+  - description 2
+  - description 3
+  - description 4
+]
+#resume-entry(
+  title: "position",
+  location: "company",
+  description: "title",
+  date: "date"
+)
+#resume-item[
+  - description 1
+  - description 2
+]
+```
+
+## skills
+
+```{=typst}
+#resume-entry(
+  title: "title",
+  description: "description"
+)
+#resume-entry(
+  title: "title",
+  description: "description"
+)
+```
+
+## courses and certificates
+
+```{=typst}
+#resume-entry(
+  title: "title",
+  location: "location",
+  date: "date",
+  description: "description"
+)
+```
+
+## academic talks
+
+```{=typst}
+#resume-entry(
+  title: "title",
+  location: "location",
+  date: "date",
+  description: "description"
+)
+```

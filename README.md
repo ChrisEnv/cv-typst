@@ -36,7 +36,7 @@ author:
     - icon: fa envelope
       text: sample@sample
       url: "mailto:sample@sample.de"
-    - icon: fa brands linkedin
+    - icon: fa linkedin
       text: /in/xxx
       url: https://www.linkedin.com/in/xxx/
 

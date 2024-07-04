@@ -256,9 +256,8 @@ grid(
 ) = {
   if profile-photo.len() > 0 {
     block(
-      above: 15pt,
-      stroke: none,
-      radius: 9999pt,
+      stroke: 0.5pt,
+      radius: 0pt,
       clip: true,
       image(
         fit: "contain",
@@ -277,21 +276,21 @@ grid(
   profile-photo: "",
 ) = {
   if profile-photo.len() > 0 {
-    block[
-      #box(width: 5fr)[
-        #create-header-info(
-          firstname: firstname,
-          lastname: lastname,
-          position: position,
-          address: address,
-          contacts: contacts,
-          align-header: left
-        )
-      ]
-      #box(width: 1fr)[
-        #create-header-image(profile-photo: profile-photo)
-      ]
-    ]
+  
+  grid(
+    columns: (20%, 80%),
+    rows: (140pt),
+    block(stroke: 2pt, image(profile-photo, width: 100pt, height:140pt, fit:"cover")),
+    block(height: 100%, width: 100%, create-header-info(
+      firstname: firstname,
+      lastname: lastname,
+      position: position,
+      address: address,
+      contacts: contacts,
+      align-header: center + horizon
+    ))
+  )
+  
   } else {
     
     create-header-info(

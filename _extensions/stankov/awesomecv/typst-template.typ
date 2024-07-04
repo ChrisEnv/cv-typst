@@ -1,4 +1,4 @@
-#import "@preview/fontawesome:0.1.0": *
+#import "@preview/fontawesome:0.2.1": *
 
 //------------------------------------------------------------------------------
 // Style
@@ -44,9 +44,7 @@ $endif$
   if icon_string.starts-with("fa ") [
     #let parts = icon_string.split(" ")
     #if parts.len() == 2 {
-      fa-icon(parts.at(1), fill: color-darknight)
-    } else if parts.len() == 3 and parts.at(1) == "brands" {
-      fa-icon(parts.at(2), fa-set: "Brands", fill: color-darknight)
+      fa-icon(parts.at(1), fill: color-accent)
     } else {
       assert(false, "Invalid fontawesome icon string")
     }
@@ -173,7 +171,8 @@ grid(
         font: (font-header),
       )
       #text(weight: "bold")[#firstname]
-      #text(weight: "thin")[#lastname]
+      #text(weight: "bold")[#lastname]
+      
     ]
   ]
 }
@@ -187,12 +186,13 @@ grid(
     )
   
   set text(
-    color-accent,
+    color-darknight,
     size: 9pt,
     weight: "regular",
   )
     
-  smallcaps[
+  block[
+    #text(fill: color-accent, weight: "bold", size: 14pt)[\*]
     #position
   ]
 }
@@ -205,12 +205,11 @@ grid(
       below: 0.75em,
   )
   set text(
-    color-lightgray,
+    color-darknight,
     size: 9pt,
-    style: "italic",
   )
-
-  block[#address]
+  
+  block[#fa-icon("house", fill: color-accent) #address]
 }
 
 #let create-header-contacts(
@@ -279,6 +278,7 @@ grid(
   
   grid(
     columns: (20%, 80%),
+    gutter: 30pt,
     rows: (140pt),
     block(stroke: 2pt, image(profile-photo, width: 100pt, height:140pt, fit:"cover")),
     block(height: 100%, width: 100%, create-header-info(
@@ -287,7 +287,7 @@ grid(
       position: position,
       address: address,
       contacts: contacts,
-      align-header: center + horizon
+      align-header: left + horizon
     ))
   )
   

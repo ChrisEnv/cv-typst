@@ -1,6 +1,9 @@
 *.pdf
 template.typ
 .Rproj.user
+.RData
+.Rhistory
+.Rprofile
 
 my-cv/
 /.quarto/

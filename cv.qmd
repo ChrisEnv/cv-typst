@@ -14,7 +14,7 @@ author:
     - icon: fa linkedin
       text: /in/xxx
       url: https://www.linkedin.com/in/xxx/
-profile-photo: "assets/photos/dummy.png"
+#profile-photo: "assets/photos/dummy.png"
 
 format: awesomecv-typst
 ---
